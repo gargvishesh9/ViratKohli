@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Virat Kohli</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <section>
+    <div class="circle"></div>
+    <header>
+      <a href="#"><img src="images/VIRATKOHLI.png" class="logo"></a>
+      <div class="toggle" onclick="toggleMenu()"></div>
+      <ul class="navigation">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Statistics</a>
+        </li>
+        <li>
+          <a href="#">Quotes</a>
+        </li>
+        <li>
+          <a href="#">Gallery</a>
+        </li>
+      </ul>
+    </header>
+    <div class="content">
+      <div class="textBox">
+        <h2>The G.O.A.T</h2>
+        <p id="info">
+          Virat Kohli born on 5 November 1988 is an Indian cricketer and the current captain
+          of the India national team. A right-handed top-order batsman , Kohli is regarded
+          as one of the best contemporary batsmen in the world.
+        </p>
+        <a href="https://en.wikipedia.org/wiki/Virat_Kohli">Learn more</a>
+      </div>
+      <div class="imgBox">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/vk1.png" /></div>
+            <div class="swiper-slide"><img src="images/vk2.png" /></div>
+            <div class="swiper-slide"><img src="images/vk3.png" /></div>
+            <div class="swiper-slide"><img src="images/vk4.png" /></div>
+            <div class="swiper-slide"><img src="images/vk5.png" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="social">
+      <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+      <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
+      <li><a href="#"><img src="images/instagram.png" alt=""></a></li>
+    </ul>
+  </section>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      loop: true,
+    });
+
+    function toggleMenu() {
+      const menuToggle = document.querySelector('.toggle');
+      const navigation = document.querySelector('.navigation');
+      menuToggle.classList.toggle('active');
+      navigation.classList.toggle('active');
+    }
+  </script>
+</body>
+
+</html>
